@@ -7,6 +7,12 @@ class Mahasiswa extends CI_Controller {
     {
         parent::__construct();
         $this->load->model('M_mahasiswa');
+        if($this->session->userdata('role') != "admin"){
+            echo '<script>
+                    alert("Anda tidak memiliki akses");
+                    window.location.href = "'.base_url('login').'";
+                </script>';
+        }
     }
 
 	public function index()

@@ -75,6 +75,14 @@
                         </p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="<?= base_url('login/logout')?>" class="nav-link">
+                        <i class="nav-icon fab fa-android"></i>
+                        <p>
+                            Logout
+                        </p>
+                    </a>
+                </li>
 
             </ul>
         </nav>
