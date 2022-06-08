@@ -32,6 +32,21 @@ class M_mahasiswa extends CI_Model {
         return $query->result();
     }
 
+    function countMahasiswa(){
+        $query = $this->db->get('mahasiswa')->num_rows();
+        return $query;
+    }
+
+    function countDosen(){
+        $query = $this->db->get('dosen')->num_rows();
+        return $query;
+    }
+
+    function countProdi(){
+        $query = $this->db->get('prodi')->num_rows();
+        return $query;
+    }
+
     function insert($data){
         $this->db->insert('mahasiswa', $data);
     }
