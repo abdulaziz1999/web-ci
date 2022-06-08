@@ -75,9 +75,9 @@
                                                 <td><?= $row->prodi_kode?></td>
                                                 <td><?= $row->nama_prodi?></td>
                                                 <td>
-                                                    <a class="btn btn-sm btn-primary" href="<?= base_url('mahasiswa/detail')?>">Detail</a>
-                                                    <a class="btn btn-sm btn-warning" href="<?= base_url('mahasiswa/update')?>">Update</a>
-                                                    <a class="btn btn-sm btn-danger" href="<?= base_url('mahasiswa/delete')?>">Delete</a>
+                                                    <a class="btn btn-sm btn-primary" href="<?= base_url('mahasiswa/detail'.$row->nim)?>">Detail</a>
+                                                    <a class="btn btn-sm btn-warning" href="<?= base_url('mahasiswa/update'.$row->nim)?>">Update</a>
+                                                    <a class="btn btn-sm btn-danger" href="<?= base_url('mahasiswa/delete/'.$row->nim)?>" onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data ?')">Delete</a>
                                                 </td>
                                             </tr>
                                             <?php endforeach;?>
